@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :surveys, :foreign_key => "author_id"
+  has_many :results, :foreign_key => "respondent_id"
 
   attr_accessible :email, :password
   

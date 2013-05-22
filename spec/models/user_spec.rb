@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe "User" do
-  let!(:user) { User.create(email: "bob@example.com", password: "password") }
+
+  let :user do 
+    build :user
+  end
 
   context "with valid attributes" do
     it "should create a user" do
