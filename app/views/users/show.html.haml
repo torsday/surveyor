@@ -1,1 +1,9 @@
-= @user.email
+%h1 
+  = @user.email
+
+= link_to "Create Survey", new_survey_path
+
+- if @user.surveys != nil
+  - @user.surveys.each do |survey|
+    %h4
+      = survey.title

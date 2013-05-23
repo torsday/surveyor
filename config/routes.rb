@@ -6,6 +6,8 @@ Surveyor::Application.routes.draw do
   match "/login", to: "sessions#new"
   match "/sessions", to: "sessions#create"
   match "/logout", to: "sessions#destroy"
+
+  resources :surveys
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
