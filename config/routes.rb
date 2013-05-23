@@ -1,6 +1,12 @@
 Surveyor::Application.routes.draw do
   root :to => 'static_pages#home'
   resources :users
+  # resources :sessions, :only => [:new, :create, :destroy]
+
+  match "/login", to: "sessions#new"
+  match "/sessions", to: "sessions#create"
+  match "/logout", to: "sessions#destroy"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
